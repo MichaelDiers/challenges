@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    {% assign styles = site.baseurl | append: "/assets/css/styles.css" %}
+    {% assign styles = site.url | append: site.baseurl | append: "/assets/css/styles.css" %}
     <link rel="stylesheet" href="{{ styles }}">
   </head>
   <body>

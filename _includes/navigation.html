@@ -2,14 +2,5 @@
     {% for item in site.data.navigation %}
       {% assign currentLink = site.baseurl | append: item.link %}
       <a href="{{ currentLink }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
-      <p>
-        <ul>
-          <li>{{site.url}}</li>
-          <li>{{site.baseurl}}</li>
-          <li>{{ currentLink }}</li>
-          <li>{{ page.url }}</li>
-          <li>{{ item.link }}</li>
-        </ul>
-      </p>    
     {% endfor %}
 </nav>

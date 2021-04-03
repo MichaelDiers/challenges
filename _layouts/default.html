@@ -9,5 +9,8 @@
   <body>
     {% include navigation.html %}
     {{ content }}
+    {% include footer.html %}
   </body>
+  {% assign post_js = site.baseurl | append: "/assets/js/post.js" %}
+  <script src="{{ post_js }}"></script>
 </html>

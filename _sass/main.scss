@@ -1,3 +1,30 @@
 .current {
     color: green;
   }
+
+.icon {
+  height: 30px;
+  width: 30px;
+}
+
+.container {
+  display: grid;    
+
+  &.images {
+    grid-template-columns: 50px 100px;
+  }
+}
+
+.headlineExtended {
+  &.future {
+    color: gray;
+  }
+  
+  &.active {
+    color: black;
+  }
+
+  &.expired {
+    color: red;
+  }
+}

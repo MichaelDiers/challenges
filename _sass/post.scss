@@ -1,0 +1,42 @@
+.post {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+        "date"
+        "header"
+        "author"
+        "icons"
+        "info"
+        "training";
+    gap: 10px 10px;
+
+    .grid {
+        &__date {
+            place-self: center;
+            grid-area: date;
+        }
+
+        &__header {
+            place-self: center;
+            grid-area: header;
+        }
+
+        &__author {
+            place-self: center;
+            grid-area: author;
+        }
+
+        &__icons {
+            place-self: center;
+            grid-area: icons;
+        }
+
+        &__info {
+            grid-area: info;
+        }
+
+        &__training {
+            grid-area: training;
+        }
+    }    
+}

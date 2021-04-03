@@ -1,0 +1,7 @@
+{% for training in include.training %}
+    {% for img in site.data.images %}
+        {% if img.type == training.type %}
+            <img src="{{ site.baseurl }}/assets/images/{{ img.name}}" alt="{{ img.alt }}" class="icon">
+        {% endif %}
+    {% endfor %}
+{% endfor %}

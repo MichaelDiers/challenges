@@ -1,0 +1,22 @@
+{
+    "c0001" : {
+        "info" : "my foo bar",
+        "list" : [
+            {
+                "type" : "steps",
+                "text" : "15.000 Schritte pro Woche"
+            },
+            {
+                "type" : "squats",
+                "text" : "An zwei Tagen Kniebeugen",
+                "program" : [
+                    "5x Kniebeugen",
+                    "5x Prisoner Kniebeugen",
+                    "5x Kniebeugen pro Kniebeuge 5s (2s runter/ 1s halten/ 2s hoch)",
+                    "5x Prisoner Kniebeugen",
+                    "5x Kniebeugen"
+                ]
+            }
+        ]
+    }
+}

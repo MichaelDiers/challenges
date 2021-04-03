@@ -1,0 +1,6 @@
+<footer>
+    {% for item in site.data.footer %}
+      {% assign currentLink = site.baseurl | append: item.link %}
+      <a href="{{ currentLink }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+    {% endfor %}
+</footer>

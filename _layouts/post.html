@@ -1,34 +1,17 @@
 ---
 layout: default
 ---
-<div class="post" start="{{ page.start }}" end="{{ page.end }}">
-  <div class="grid__date">{{ page.date | date: "%d.%m.%y" }}</div>
-  <h1 class="grid__header">
-    {% assign: start = page.start | date: "%d.%m." | append: " bis " %}
-    {% assign: end = page.end | date: "%d.%m.%y" %}
-    <span>{{ page.title }}: {{ start }}{{ end }}</span>
-    <span class='headlineExtended'></span>
-  </h1>  
-  <div class="grid__author">by {{ page.author }}</div>
-  <div class="grid__icons">
-    {% include icons.html training=page.training %}
-  </div>  
-  <h2 class="grid__info">{{ page.info }}</h2>
-  <div class="grid__training">
-    <h3>Training</h3>
-    <ul>
-      {% for item in page.training %}
-        <li>
-          {{ item.text }}
-          <ul>
-            {% for position in item.program %}
-              <li>
-                {{ position }}
-              </li>
-            {% endfor %}
-          </ul>
-        </li>
+<div class="post">
+  <div class="icons">
+    {% for type in page.types %}
+      {% for img in site.data.images %}
+        {% if img.type == type %}
+            <img src="{{ site.baseurl }}/assets/images/{{ img.name}}" alt="{{ img.alt }}" class="icon">
+        {% endif %}
       {% endfor %}
-    </ul>  
+    {% endfor %}
+  </div>
+  <div class="content">
+    {{ content }}  
   </div>
 </div>

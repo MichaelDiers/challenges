@@ -1,6 +1,14 @@
 <nav>
+  <div class='logo'>
+    <a href="{{ site.baseurl }}">
+      {% assign logo = site.baseurl | append: "/assets/images/raise-3338589_640.jpg" %}
+      <img src="{{ logo }}" alt="logo">
+    </a>
+  </div>
+  <div class='menu'>
     {% for item in site.data.navigation %}
       {% assign currentLink = site.baseurl | append: item.link %}
       <a href="{{ currentLink }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
     {% endfor %}
+  </div>
 </nav>

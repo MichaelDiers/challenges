@@ -3,13 +3,22 @@
   from: kropekk_pl
   reference: Bild von <a href="https://pixabay.com/de/users/kropekk_pl-114936/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=285773">kropekk_pl</a> auf <a href="https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=285773">Pixabay</a>
   type: squats
+  class: icon
 - name: icon-1717391_640.png
   alt: steps
   from: Sinisa Maric 
   reference: Bild von <a href="https://pixabay.com/de/users/sinisamaric1-3044277/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1717391">Sinisa Maric</a> auf <a href="https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1717391">Pixabay</a>
   type: steps
+  class: icon
 - name: bike-307774_640.png
   alt: bike
   from: Clker-Free-Vector-Images
   reference: Bild von <a href="https://pixabay.com/de/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=307774">Clker-Free-Vector-Images</a> auf <a href="https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=307774">Pixabay</a>
   type: bike
+  class: icon
+- name: raise-3338589_640.jpg
+  alt: challenge
+  from: mohamed Hassan
+  reference: Bild von <a href="https://pixabay.com/de/users/mohamed_hassan-5229782/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3338589">mohamed Hassan</a> auf <a href="https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3338589">Pixabay</a>
+  type: challenge
+  class: "icon no-filter"

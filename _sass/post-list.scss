@@ -1,0 +1,9 @@
+.post-list {
+    
+    > .post {
+        display: grid;
+        grid-template-rows: auto auto;
+        place-items: center;
+        padding: 10px;
+    }
+}

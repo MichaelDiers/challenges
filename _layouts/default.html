@@ -1,16 +1,23 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    {% assign styles = site.baseurl | append: "/assets/css/styles.css" %}
-    <link rel="stylesheet" href="{{ styles }}">
-  </head>
-  <body>
-    {% include navigation.html %}
-    {{ content }}
-    {% include footer.html %}
-  </body>
-  {% assign post_js = site.baseurl | append: "/assets/js/post.js" %}
-  <script src="{{ post_js }}"></script>
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ page.title }}</title>
+        {% assign styles = site.baseurl | append: "/assets/css/styles.css" %}
+        <link rel="stylesheet" href="{{ styles }}">
+    </head>
+    <body>
+        <header>
+            <div>
+                {% include navigation.html %}
+            </div>
+        </header>
+        <main>
+            <div>
+                {{ content }}
+            </div>
+        </main>
+        {% include footer.html %}
+    </body>
 </html>

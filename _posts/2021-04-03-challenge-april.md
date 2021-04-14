@@ -4,7 +4,7 @@ types:
   - steps
   - bike
 ---
-# Challenge 3: 01.04. bis 30.04.2021
+# Challenge April
 
 April Challenge!
 

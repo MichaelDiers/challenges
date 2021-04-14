@@ -1,14 +1,19 @@
 <nav>
   <div class='logo'>
-    <a href="{{ site.baseurl }}">
+    {% assign logoUrl = site.baseurl %}
+    {% if logoUrl == null %}
+      {% assign logoUrl = "/" %}
+    {% endif %}
+    <a href="{{ logoUrl }}">
       {% assign logo = site.baseurl | append: "/assets/images/raise-3338589_640.jpg" %}
       <img src="{{ logo }}" alt="logo">
     </a>
   </div>
   <div class='menu'>
-    {% for item in site.data.navigation %}
-      {% assign currentLink = site.baseurl | append: item.link %}
-      <a href="{{ currentLink }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+    {% assign pages = site.pages | where_exp: "item", "item.navigation_rank != null and item.navigation_rank > 0" | sort: "navigation_rank" %}
+    {% for currentPage in pages %}
+      {% assign currentLink = site.baseurl | append: currentPage.url %}
+      <a href="{{ currentLink }}" {% if currentPage.url == page.url %} class="current" {% endif %}>{{ currentPage.title }}</a>
     {% endfor %}
   </div>
 </nav>

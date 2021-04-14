@@ -1,5 +1,6 @@
 ---
 title: Aktuelle-Challenges
+navigation_rank: 20
 ---
 {% assign actives = "" | split: ',' %}
 {% for tag in site.tags %}

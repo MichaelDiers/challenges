@@ -3,6 +3,7 @@ author: md
 types:
   - steps
   - bike
+tag: month
 ---
 # Challenge April
 

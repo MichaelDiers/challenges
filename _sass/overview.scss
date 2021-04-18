@@ -1,0 +1,22 @@
+.overview {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+
+    > a {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        place-items: center;
+
+        &:link, &:visited, &:hover, &:active {
+           text-decoration: none;
+           color: inherit;
+        }
+    }
+
+    h1 {
+        text-align: center;
+    }
+}

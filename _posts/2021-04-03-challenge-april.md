@@ -4,6 +4,7 @@ types:
   - steps
   - bike
 tag: month
+image: girl-1186895_640.jpg
 ---
 # Challenge April 2021
 

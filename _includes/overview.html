@@ -1,0 +1,11 @@
+<a style="background: linear-gradient(
+    rgba(0, 0, 0, 0.8), 
+    rgba(0, 0, 0, 0.8)
+    ), url('{{ include.image }}')"
+    href="{{ site.baseurl }}{{ include.url }}">
+    <div>{{ include.header }}</div>        
+        {{ include.excerpt }}  
+    <div>
+        {% include icons.html types=include.types %}
+    </div>
+</a>

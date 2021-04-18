@@ -10,7 +10,7 @@
     </a>
   </div>
   <div class='menu'>
-    {% assign pages = site.pages | where_exp: "item", "item.navigation_rank != null and item.navigation_rank > 0" | sort: "navigation_rank" %}
+    {% assign pages = site.pages | where_exp: "item", "item.navigation_rank != null" | where_exp: "item", "item.navigation_rank > 0" | sort: "navigation_rank" %}
     {% for currentPage in pages %}
       {% assign currentLink = site.baseurl | append: currentPage.url %}
       <a href="{{ currentLink }}" {% if currentPage.url == page.url %} class="current" {% endif %}>{{ currentPage.title }}</a>

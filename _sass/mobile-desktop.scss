@@ -1,0 +1,17 @@
+.show-on-mobile {
+    display: block;
+}
+
+.show-on-desktop {
+    display: none;
+}
+
+@media screen and (min-width: $desktop-min-width) {
+    .show-on-mobile {
+        display: none;
+    }
+    
+    .show-on-desktop {
+        display: block;
+    }
+}

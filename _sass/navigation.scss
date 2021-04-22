@@ -1,12 +1,135 @@
-nav {
-    padding: 10px;
+nav > .show-on-mobile > div {
     display: grid;
-    grid-template-rows: 1fr;
     grid-template-columns: auto 1fr auto;
-    grid-template-areas: 'logo menu empty';
+    grid-template-rows: auto;
     place-items: center;
+    padding: 20px;
 
-    > div.logo {
+    .logo > img {
+        width: 50px;
+    }
+    
+    .menu {
+        width: $menu-width;
+        height: $menu-height;
+    }
+
+    .menu > input {
+        position: relative;
+        z-index: 4;
+        width: $menu-width;
+        height: $menu-height;
+        opacity: 0;
+
+        ~ .menu-content {
+            display: none;
+            position: relative;
+            color: $background-color;
+            background: $color;
+            z-index: 2;
+            padding: 20px;
+            width: 75vw;
+            left: calc(-75vw + 60px);
+            top: -100px;
+            opacity: 0;
+
+            div {
+                margin: 20px;
+
+                a:link, a:visited {
+                    color: $background-color;
+                    text-decoration: none;
+                    cursor: auto;
+                  }
+                  
+                  a:link:active, a:visited:active {
+                    color: $background-color;
+                  }
+            }
+        }
+
+        @keyframes animation-cross-left {
+            from {
+                transform: translateY(0px) rotateZ(0deg) translateX(0px);
+            }
+            to {
+                transform: translateY(4px) rotateZ(45deg) translateX(1px);
+            }
+        }
+        
+        @keyframes animation-cross-right {
+            from {
+                transform: translateY(0px) rotateZ(0deg);
+            }
+            to {
+                transform: translateY(-5px) rotateZ(-45deg)
+            }
+        }
+
+        &:checked {
+            ~ .menu-content {
+                display: block;                                   
+                animation-name: animation-opacity-0-1;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }
+
+            ~ label div {                
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes animation-border-color-switch {
+                from {
+                    border-bottom-color: $color;
+                }
+                to {
+                    border-bottom-color: $background-color;
+                }
+            }
+
+            ~ label div:first-child {
+                animation-name: animation-border-color-switch, animation-cross-left;
+            }
+
+            ~ label div:nth-child(2) {
+                display: none;
+            }
+
+            ~ label div:last-child {
+                animation-name: animation-border-color-switch, animation-cross-right;
+            }
+        }
+    }
+
+    .menu > label {
+        position: relative;
+        z-index: 3;
+        
+        > div {
+            position: relative;
+            border-bottom: $color;
+            border-bottom-width: $menu-hamburger-width;
+            border-bottom-style: solid;
+            border-radius: 3px;
+            margin-bottom: $menu-hamburger-margin;            
+            top: calc(-#{$menu-height} / 2 - (2 * (#{$menu-hamburger-width} + #{$menu-hamburger-margin})) / 2 - (#{$menu-hamburger-width} + #{$menu-hamburger-margin}) / 2);
+        }
+    }
+}
+
+nav > .show-on-desktop > div {
+    display: grid;
+    grid-template-columns: 120px 1fr 120px;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "logo headline ."
+        ". menu .";
+    place-items: center;
+    padding: 20px;
+    gap: 10px;
+
+    .logo {
         grid-area: logo;
 
         img {
@@ -14,7 +137,41 @@ nav {
         }
     }
 
-    > div.menu {
-        grid-area: menu;
+    .headline {
+        grid-area: headline;
+        font-size: 64pt;
     }
+
+    ul {
+        grid-area: menu;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: $background-color;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: $color;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+        
+        border-bottom-style: solid;
+        border-bottom-color: $background-color;
+
+        &.active {
+            border-bottom-color: $color;    
+        }
+      }
+      
+      li a:hover {
+        background-color: $background-color-highlight;
+        border-bottom-color: $color;
+      }
 }

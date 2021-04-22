@@ -1,19 +1,49 @@
+{% assign logo_href = site.baseurl %}
+{% if logo_href == null %}
+  {% assign logo_href = "/" %}
+{% endif %}
+{% assign logo_url = site.baseurl | append: "/assets/images/favicon/android-chrome-192x192.png" %}
 <nav>
-  <div class='logo'>
-    {% assign logoUrl = site.baseurl %}
-    {% if logoUrl == null %}
-      {% assign logoUrl = "/" %}
-    {% endif %}
-    <a href="{{ logoUrl }}">
-      {% assign logo = site.baseurl | append: "/assets/images/raise-3338589_640.jpg" %}
-      <img src="{{ logo }}" alt="logo">
-    </a>
+  <div class='show-on-mobile'>
+    <div>
+      <a href="{{ logo_href }}" class='logo'>
+        <img src="{{ logo_url }}" alt="logo">
+      </a>
+      <div>Challenges</div>
+      <div class="menu">
+        <input name="toggle" type="checkbox" />
+        <label for="toggle">
+          <div></div>
+          <div></div>
+          <div></div>
+        </label>
+        <div class="menu-content">
+          {% assign pages = site.pages | where_exp: "item", "item.navigation_rank != null" | where_exp: "item", "item.navigation_rank > 0" | sort: "navigation_rank" %}
+          {% for currentPage in pages %}
+            {% assign currentLink = site.baseurl | append: currentPage.url %}
+            <div>
+              <a href="{{ currentLink }}">{{ currentPage.title }}</a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
   </div>
-  <div class='menu'>
-    {% assign pages = site.pages | where_exp: "item", "item.navigation_rank != null" | where_exp: "item", "item.navigation_rank > 0" | sort: "navigation_rank" %}
-    {% for currentPage in pages %}
-      {% assign currentLink = site.baseurl | append: currentPage.url %}
-      <a href="{{ currentLink }}" {% if currentPage.url == page.url %} class="current" {% endif %}>{{ currentPage.title }}</a>
-    {% endfor %}
+  <div class='show-on-desktop'>
+    <div>
+      <a href="{{ logo_href }}" class="logo">
+        <img src="{{ logo_url }}" alt="logo">
+      </a>
+      <div class='headline'>Challenges</div>
+      <ul>
+        {% assign pages = site.pages | where_exp: "item", "item.navigation_rank != null" | where_exp: "item", "item.navigation_rank > 0" | sort: "navigation_rank" %}
+        {% for currentPage in pages %}
+          {% assign currentLink = site.baseurl | append: currentPage.url %}
+          <li>
+            <a href="{{ currentLink }}" {% if currentPage.url == page.url %} class="active" {% endif %}>{{ currentPage.title }}</a>
+          </li>            
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </nav>

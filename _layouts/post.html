@@ -1,7 +1,10 @@
 ---
 layout: default
 ---
-<div class="post">
+<div class="post" style="background: linear-gradient(
+  rgba(0, 0, 0, 0.8), 
+  rgba(0, 0, 0, 0.8)
+  ), url('{{ site.baseurl }}/assets/images/{{ page.image }}')">
   <div class="icons">
     {% for type in page.types %}
       {% for img in site.data.images %}

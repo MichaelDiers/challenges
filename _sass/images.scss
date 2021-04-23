@@ -1,5 +1,17 @@
 .images {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    place-items: center;
+
     .no-filter {
         filter: none;
+        width: 100px;
+    }    
+
+    div {
+        justify-self: left;
     }
 }

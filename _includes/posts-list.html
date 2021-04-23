@@ -4,7 +4,7 @@
   {% for post in include.posts %}
     {% assign image = site.baseurl | append: "/assets/images/" | append: post.image %}
     {% assign header = "Abgelaufene Challenge" %}
-    {% if post == include.posts[0] %}
+    {% if include.actives == "all" or post == include.posts[0] %}
     {%  assign header = "Aktuelle Challenge" %}
     {% endif %}
     {% include overview.html image=image url=post.url excerpt=post.excerpt types=post.types header=header %}

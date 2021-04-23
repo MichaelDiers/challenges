@@ -7,4 +7,4 @@ navigation_rank_mobile: 20
 {% for tag in site.tags %}
     {% assign actives = actives | push: tag[1].first %}
 {% endfor %}
-{% include posts-list.html title=page.title posts=actives %}
+{% include posts-list.html title=page.title posts=actives actives="all" %}

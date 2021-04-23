@@ -1,12 +1,12 @@
 # {{ include.title }}
 
-<div class="post-list">  
-  {% for post in include.posts %}    
-    <div class="post">      
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.excerpt }}</a>
-      <div>
-        {% include icons.html types=post.types %}          
-      </div>
-    </div>
+<div class="overview">  
+  {% for post in include.posts %}
+    {% assign image = site.baseurl | append: "/assets/images/" | append: post.image %}
+    {% assign header = "Abgelaufene Challenge" %}
+    {% if post == include.posts[0] %}
+    {%  assign header = "Aktuelle Challenge" %}
+    {% endif %}
+    {% include overview.html image=image url=post.url excerpt=post.excerpt types=post.types header=header %}
   {% endfor %}
 </div>

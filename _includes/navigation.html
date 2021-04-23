@@ -37,7 +37,7 @@
       </a>
       <div class='headline'>Challenges</div>
       <ul>
-        {% assign pages = site.pages | where_exp: "item", "item.navigation_rank_desktop != null" | where_exp: "item", "item.navigation_rank_desktop > 0" | sort: "navigation_rank" %}
+        {% assign pages = site.pages | where_exp: "item", "item.navigation_rank_desktop != null" | where_exp: "item", "item.navigation_rank_desktop > 0" | sort: "navigation_rank_desktop" %}
         {% for currentPage in pages %}
           {% assign currentLink = site.baseurl | append: currentPage.url %}
           <li>

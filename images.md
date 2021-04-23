@@ -1,5 +1,6 @@
 ---
 title: Bildquellen
+navigation_rank_mobile: 50
 ---
 # Bildquellen
 

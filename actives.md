@@ -1,6 +1,7 @@
 ---
 title: Aktuelle-Challenges
-navigation_rank: 20
+navigation_rank_desktop: 20
+navigation_rank_mobile: 20
 ---
 {% assign actives = "" | split: ',' %}
 {% for tag in site.tags %}

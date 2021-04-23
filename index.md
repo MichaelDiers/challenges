@@ -1,6 +1,5 @@
 ---
 title: Challenges
-navigation_rank: 10
 ---
 {% assign week = site.tags.week.first %}
 {% assign weekImage = site.baseurl | append: "/assets/images/" | append: week.image %}

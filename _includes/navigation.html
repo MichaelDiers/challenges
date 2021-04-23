@@ -19,7 +19,7 @@
           <div></div>
         </label>
         <div class="menu-content">
-          {% assign pages = site.pages | where_exp: "item", "item.navigation_rank != null" | where_exp: "item", "item.navigation_rank > 0" | sort: "navigation_rank" %}
+          {% assign pages = site.pages | where_exp: "item", "item.navigation_rank_mobile != null" | where_exp: "item", "item.navigation_rank_mobile > 0" | sort: "navigation_rank_mobile" %}
           {% for currentPage in pages %}
             {% assign currentLink = site.baseurl | append: currentPage.url %}
             <div>
@@ -37,7 +37,7 @@
       </a>
       <div class='headline'>Challenges</div>
       <ul>
-        {% assign pages = site.pages | where_exp: "item", "item.navigation_rank != null" | where_exp: "item", "item.navigation_rank > 0" | sort: "navigation_rank" %}
+        {% assign pages = site.pages | where_exp: "item", "item.navigation_rank_desktop != null" | where_exp: "item", "item.navigation_rank_desktop > 0" | sort: "navigation_rank" %}
         {% for currentPage in pages %}
           {% assign currentLink = site.baseurl | append: currentPage.url %}
           <li>

@@ -2,7 +2,7 @@ name: scheduled rebuild
 
 on:
   schedule:
-   - cron: "0 0,12 * * *"
+   - cron: "0 12 * * *"
 jobs:
   curl:
     runs-on: ubuntu-latest

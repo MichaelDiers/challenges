@@ -1,6 +1,7 @@
 $z-index-input: 10;
 $z-index-cross: calc(#{$z-index-input} - 1); 
-$z-index-menu: calc(#{$z-index-cross} - 1);
+$z-index-label: calc(#{$z-index-cross} - 1); 
+$z-index-menu: calc(#{$z-index-label} - 1);
 $z-index-overlay: calc(#{$z-index-menu} - 1);
 
 nav > .show-on-mobile > div {
@@ -126,10 +127,11 @@ nav > .show-on-mobile > div {
 
     .menu > label {
         position: relative;
-        z-index: $z-index-cross;
+        z-index: $z-index-label;
         
         > div {
             position: relative;
+            z-index: $z-index-cross;
             border-bottom: $color;
             border-bottom-width: $menu-hamburger-width;
             border-bottom-style: solid;

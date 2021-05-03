@@ -6,7 +6,7 @@ types:
 tag: month
 image: design-3142269_640.jpg
 ---
-# Challenge Mai 2021
+# {{ page.title }} 2021
 
 Mai Challenge!
 

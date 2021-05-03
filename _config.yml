@@ -9,4 +9,6 @@ defaults:
       path: ""
     values:
       layout: "default"
-future: false      
+future: false
+kramdown:
+  auto_ids: false

@@ -3,11 +3,12 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 20px;
+    padding: 10px;
 
     > a {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr 1fr;
         place-items: center;
 
         &:link, &:visited, &:hover, &:active {

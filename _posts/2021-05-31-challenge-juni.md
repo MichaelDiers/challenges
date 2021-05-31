@@ -4,11 +4,11 @@ types:
   - steps
   - bike
 tag: month
-image: design-3142269_640.jpg
+image: dance-3134828_640.jpg
 ---
 # {{ page.title }} 2021
 
-Mai Challenge!
+Juni Challenge!
 
-- 115.000 Schritte im Mai
+- 120.000 Schritte im Juni
 - An 4 Tagen mdRzA oder 60min biken

@@ -10,5 +10,5 @@ image: raise-3338589_640.jpg
 
 August Challenge!
 
-- 140.000 Schritte im Juli
+- 140.000 Schritte im September
 - An 5 Tagen mdRzA oder 60min biken

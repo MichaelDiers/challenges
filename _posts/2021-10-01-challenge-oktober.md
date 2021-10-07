@@ -11,4 +11,4 @@ image: road-g0be534016_640.jpg
 Oktober Challenge!
 
 - 150.000 Schritte im Oktober
-- An 5 Tagen Schwimmen, Radfahren, Laufen, Wandern, Klettern, Yoga oder Krafttraining
+- An 5 Tagen Schwimmen, Radfahren, Laufen, Wandern, Klettern, Yoga, Inlinern oder Krafttraining
